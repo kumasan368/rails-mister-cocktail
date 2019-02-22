@@ -17,8 +17,10 @@
 
   </div>
 
+  <div class="cards">
+
   <div class="card">
-    <p>Name: <strong><%= @cocktail.name %></strong></p>
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 300, crop: :fill %>
   </div>
 
   <div class="card">
@@ -47,6 +49,7 @@
         <% end %>
       <% end %>
   </div>
+</div>
 
   </div>
 </div>
