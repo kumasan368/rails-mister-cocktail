@@ -1,0 +1,32 @@
+// Place all the styles related to the Doses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.doses_container {
+  flex-wrap      : wrap;
+  text-align     : center;
+  justify-content: center;
+}
+
+.form {
+  background-color: white;
+  box-shadow: 1px 1px 1px gray;
+  padding: 20px;
+  margin:20px;
+}
+
+.icons {
+  display        : flex;
+  flex-wrap      : wrap;
+  text-align     : center;
+  justify-content: center;
+}
+
+.icon {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+h1 {
+  margin-top:7px;
+}

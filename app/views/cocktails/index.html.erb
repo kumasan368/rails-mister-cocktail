@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="cocktail_container">
+
+    <h1>Cocktails List</h1>
+
+    <%= link_to new_cocktail_path do %>
+      <i class="fas fa-plus"></i>
+    <% end %>
+
+      <div class="cards">
+        <% @cocktails.each do |cocktail| %>
+          <div class="card">
+              <%= link_to cocktail_path(cocktail) do %>
+                <i class="fas fa-info"></i>
+              <% end %>
+            <%= cocktail.name %>
+          </div>
+        <% end %>
+      </div>
+
+  </div>
+</div>

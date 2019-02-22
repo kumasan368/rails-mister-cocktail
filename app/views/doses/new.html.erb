@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="doses_container">
+
+<div class="form">
+
+  <h3>Add your special fomula for</h3>
+  <h1><%= @cocktail.name %></h1>
+
+  <%= simple_form_for ([@cocktail, @dose]) do |f| %>
+    <div class="form-group">
+      <%= f.input :description %>
+    </div>
+
+    <div class="form-group">
+      <%= f.association :ingredient %>
+      <!-- challeneg -->
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Create!", class: "btn btn-warning" %>
+    </div>
+
+  <% end %>
+</div>
+
+<div class="icons">
+<div class="icon">
+    <%= link_to cocktails_path do %>
+      <i class="fas fa-list"></i>
+    <% end %>
+</div>
+
+<div class="icon">
+    <%= link_to cocktail_path(@cocktail) do %>
+      <i class="fas fa-wine-glass"></i>
+    <% end %>
+</div>
+
+</div>
+
+</div>
