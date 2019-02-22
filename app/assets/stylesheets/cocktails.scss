@@ -29,6 +29,7 @@
   opacity:1;
   filter: sepia(50%);
   transition: .3s ease-in-out;
+  height: 200px;
   &:hover {
     opacity: 0.95;
     filter: sepia(0);
