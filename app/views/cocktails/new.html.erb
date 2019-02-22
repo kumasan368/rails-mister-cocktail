@@ -1,3 +1,37 @@
+<div class="navbar-cocktail">
+  <!-- Logo -->
+  <div class="navbar-cocktail-brand">
+  <%= link_to cocktails_path do %>
+    <i class="fas fa-list"></i>
+  <% end %>
+  </div>
+
+  <!-- Right Navigation -->
+  <div class="navbar-cocktail-right hidden-xs hidden-sm">
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-cocktail-item">
+      <div class="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-cocktail-dropdown-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://tailbook.herokuapp.com/cocktails" style="color: black">Tailbook</a>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-cocktail-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-cocktail-dropdown-menu">
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="container">
   <div class="cocktail_container">
     <h1>Your original cocktail</h1>

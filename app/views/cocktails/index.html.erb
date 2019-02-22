@@ -1,37 +1,32 @@
 <div class="navbar-cocktail">
   <!-- Logo -->
-  <a href="/" class="navbar-cocktail-brand">
-      <i class="fas fa-list"></i>
-  </a>
+  <div class="navbar-cocktail-brand">
+  <a href="https://vinepair.com/spirits-101/history-of-the-cocktail/"><i class="fas fa-lightbulb"></i></a>
+  <%= link_to new_cocktail_path do %>
+  <i class="fas fa-plus" style="margin-left: 7px"></i>
+  <% end %>
+  </div>
 
   <!-- Right Navigation -->
   <div class="navbar-cocktail-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-cocktail-item navbar-cocktail-link">Host</a>
-    <a href="" class="navbar-cocktail-item navbar-cocktail-link">Trips</a>
-    <a href="" class="navbar-cocktail-item navbar-cocktail-link">Messages</a>
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-cocktail-item">
       <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-cocktail-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-cocktail-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
         </ul>
       </div>
     </div>
   </div>
+
+  <a href="https://tailbook.herokuapp.com/cocktails" style="color: black">Tailbook</a>
 
   <!-- Dropdown appearing on mobile only -->
   <div class="navbar-cocktail-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-cocktail-dropdown-menu">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
       </ul>
     </div>
   </div>
@@ -41,10 +36,6 @@
   <div class="cocktail_container">
 
     <h1>Cocktails List</h1>
-
-    <%= link_to new_cocktail_path do %>
-      <i class="fas fa-plus"></i>
-    <% end %>
 
     <div class="row">
 
@@ -57,12 +48,9 @@
          style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
          url('<%= cl_image_path cocktail.photo unless cocktail.photo.url.nil? %>')" >
 
-        <div class="card-category">Popular</div>
-
         <div class="card-description">
 
-          <%= link_to cocktail_path(cocktail) do %>
-            <i class="fas fa-info"></i>
+          <%= link_to cocktail_path(cocktail), class: "card-l" do %>
           <% end %>
 
           <%= cocktail.name %>

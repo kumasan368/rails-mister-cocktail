@@ -1,3 +1,41 @@
+<div class="navbar-cocktail">
+  <!-- Logo -->
+  <div class="navbar-cocktail-brand">
+  <a href="https://vinepair.com/spirits-101/history-of-the-cocktail/"><i class="fas fa-lightbulb"></i></a>
+  <%= link_to cocktails_path do %>
+    <i class="fas fa-list" style="margin-left: 7px" ></i>
+  <% end %>
+  <%= link_to cocktail_path(@cocktail) do %>
+      <i class="fas fa-wine-glass" style="margin-left: 7px"></i>
+    <% end %>
+  </div>
+
+  <!-- Right Navigation -->
+  <div class="navbar-cocktail-right hidden-xs hidden-sm">
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-cocktail-item">
+      <div class="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-cocktail-dropdown-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://tailbook.herokuapp.com/cocktails" style="color: black">Tailbook</a>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-cocktail-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-cocktail-dropdown-menu">
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="container">
   <div class="doses_container">
 
@@ -24,16 +62,9 @@
 </div>
 
 <div class="icons">
-<div class="icon">
-    <%= link_to cocktails_path do %>
-      <i class="fas fa-list"></i>
-    <% end %>
-</div>
 
-<div class="icon">
-    <%= link_to cocktail_path(@cocktail) do %>
-      <i class="fas fa-wine-glass"></i>
-    <% end %>
+<div class="icon" style="margin-bottom: 20px">
+
 </div>
 
 </div>

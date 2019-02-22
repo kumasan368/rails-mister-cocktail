@@ -1,3 +1,40 @@
+<div class="navbar-cocktail">
+  <!-- Logo -->
+  <div class="navbar-cocktail-brand">
+  <a href="https://vinepair.com/spirits-101/history-of-the-cocktail/"><i class="fas fa-lightbulb"></i></a>
+  <%= link_to cocktails_path do %>
+    <i class="fas fa-list" style="margin-left: 7px"></i>
+  <% end %>
+  <%= link_to new_cocktail_dose_path(@cocktail) do %>
+      <i class="fas fa-book" style="margin-left: 7px"></i>
+  <% end %>
+  </div>
+
+  <!-- Right Navigation -->
+  <div class="navbar-cocktail-right hidden-xs hidden-sm">
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-cocktail-item">
+      <div class="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-cocktail-dropdown-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://tailbook.herokuapp.com/cocktails" style="color: black">Tailbook</a>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-cocktail-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-cocktail-dropdown-menu">
+      </ul>
+    </div>
+  </div>
+</div>
+
+
 <div class="container">
   <div class="cocktail_container">
 
@@ -5,34 +42,27 @@
 
   <div class="icons">
   <div class="icon">
-    <%= link_to cocktails_path do %>
-      <i class="fas fa-list"></i>
-    <% end %>
-  </div>
-  <div class="icon">
-    <%= link_to new_cocktail_dose_path(@cocktail) do %>
-      <i class="fas fa-book"></i>
-    <% end %>
+
   </div>
 
   </div>
 
   <div class="cards">
 
-  <div class="card">
+  <div class="card" id="show-img">
     <%= cl_image_tag @cocktail.photo, height: 300, width: 300, crop: :fill %>
   </div>
 
-  <div class="card">
+  <div class="card" id="show-card">
     <h5>"Hidden ingredients"</h5>
 
       <% if @cocktail.doses.empty? %>
-      <p>nothing...</p>
+      <h6><strong>nothing ...</strong></h6>
       <p> -
       <%= link_to new_cocktail_dose_path(@cocktail) do %>
-        Add
+        Add recipe
       <% end %>
-      recipe -
+      -
       </p>
 
       <% else %>
